@@ -1,0 +1,36 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+}
+
+.container {
+    width: min(90%, 450px);
+}
+
+.card__img::before {
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform ease-in-out 250ms;
+}
+
+.card__img:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
