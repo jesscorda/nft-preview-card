@@ -10,10 +10,6 @@ body {
     font-size: 18px;
 }
 
-.container {
-    width: min(90%, 450px);
-}
-
 .card__img::before {
     content: url(./images/icon-view.svg);
     position: absolute;
